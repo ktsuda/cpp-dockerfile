@@ -1,6 +1,7 @@
 FROM arm64v8/alpine:latest
 RUN apk update && \
-  apk add alpine-sdk cmake clang libressl-dev neovim
+  apk add --no-cache gcc libc-dev g++ make cmake wget git && \
+  rm -rf /var/cache/
 WORKDIR /tmp
 RUN wget https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip && \
   unzip release-1.11.0.zip && \
