@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  cpp-alpine-amd64:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ktsuda/cpp-alpine-amd64
+    platform: linux/amd64
+    container_name: cpp-alpine-amd64
+    volumes:
+      - type: bind
+        source: ./
+        target: /prj
+    stdin_open: true
+    tty: true
+    working_dir: /prj
+

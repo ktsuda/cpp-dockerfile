@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  cpp-alpine-arm64v8:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ktsuda/cpp-alpine-arm64v8
+    container_name: cpp-alpine-arm64v8
+    volumes:
+      - type: bind
+        source: ./
+        target: /prj
+    stdin_open: true
+    tty: true
+    working_dir: /prj
+
