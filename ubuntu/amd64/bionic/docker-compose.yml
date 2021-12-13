@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   cpp-ubuntu-amd64:
-    image: ktsuda/cpp-ubuntu-amd64:latest
+    image: ktsuda/cpp-ubuntu-amd64:bionic
     build:
       context: .
       dockerfile: Dockerfile

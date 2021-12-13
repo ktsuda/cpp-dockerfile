@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  cpp-ubuntu-amd64:
+    image: ktsuda/cpp-ubuntu-amd64:focal
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    container_name: cpp-ubuntu-amd64
+    volumes:
+      - type: bind
+        source: ./
+        target: /prj
+    stdin_open: true
+    tty: true
+    working_dir: /prj
+
+
+
